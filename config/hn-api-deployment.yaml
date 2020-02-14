@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hn-api-deployment
+  labels:
+    app: hn-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hn-api
+  template:
+    metadata:
+      labels:
+        app: hn-api
+    spec:
+      containers:
+      - name: hn-api
+        image: rodrigogarcialeon/hn-api
+        ports:
+        - containerPort: 3000
