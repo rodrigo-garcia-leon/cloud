@@ -15,7 +15,7 @@ spec:
         app: hn-api
     spec:
       containers:
-      - name: hn-api
-        image: rodrigogarcialeon/hn-api
-        ports:
-        - containerPort: 3000
+        - name: hn-api
+          image: rodrigogarcialeon/hn-api
+          ports:
+            - containerPort: 3000
