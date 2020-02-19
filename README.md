@@ -23,3 +23,7 @@ gcloud container clusters get-credentials cloud
 kubectl diff -f configs/
 kubectl apply -f configs/
 ```
+
+## todo
+
+- [ ] setup ingress and google managed ssl certificates
