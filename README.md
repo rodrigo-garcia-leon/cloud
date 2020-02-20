@@ -12,9 +12,10 @@ brew cask install google-cloud-sdk
 
 ```sh
 gcloud init
-gcloud config set compute/zone europe-west1
+gcloud config set compute/zone europe-west1-b
 gcloud container clusters create cloud --num-nodes=1
 gcloud container clusters get-credentials cloud
+gcloud compute addresses create cloud --global
 ```
 
 ## usage
@@ -23,7 +24,3 @@ gcloud container clusters get-credentials cloud
 kubectl diff -f configs/
 kubectl apply -f configs/
 ```
-
-## todo
-
-- [ ] setup ingress and google managed ssl certificates

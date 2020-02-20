@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cloud-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: cloud
+    networking.gke.io/managed-certificates: cloud-certificate
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: hn-api-service
+          servicePort: 3000
