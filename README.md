@@ -24,3 +24,8 @@ gcloud compute addresses create cloud --global
 kubectl diff -f configs/
 kubectl apply -f configs/
 ```
+
+## todo
+
+- [ ] rollouts
+- [ ] hn-api path
