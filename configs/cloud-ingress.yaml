@@ -7,9 +7,10 @@ metadata:
     networking.gke.io/managed-certificates: cloud-certificate
 spec:
   rules:
-  - http:
+  - host: cloud.rodrigogarcia.me
+    http:
       paths:
-      - path: /*
+      - path: /hn-api/*
         backend:
           serviceName: hn-api-service
           servicePort: 3000
