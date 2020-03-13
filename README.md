@@ -13,7 +13,7 @@ brew cask install google-cloud-sdk
 ```sh
 gcloud init
 gcloud config set compute/zone europe-west1-b
-gcloud container clusters create cloud --num-nodes=1
+gcloud container clusters create cloud --num-nodes=1 --machine-type=e2-small
 gcloud container clusters get-credentials cloud
 gcloud compute addresses create cloud --global
 ```
